@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: demo-adx
+  datasource:
+    url:
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+
+adx-cluster-dns: <adx-cluster-name>.eastus.kusto.windows.net
+adx-db-server: <adx-cluster-name>.eastus.kusto.windows.net
+adx-db-name: default-db

@@ -1,0 +1,14 @@
+.create-or-alter external table WeatherData (
+    metric_date: datetime,
+    max_temperature : real,
+    min_temperature : real,
+    total_precipitation : real,
+    max_wind_speed : real,
+    min_wind_speed : real)
+kind=storage
+partition by (date_partition:string)
+pathformat=("/date_partition=" date_partition)
+dataformat=parquet
+(
+  h@'abfss://demo-container@demo-adl.dfs.core.windows.net/weather-data;impersonate'
+)
