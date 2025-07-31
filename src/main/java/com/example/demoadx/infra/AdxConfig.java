@@ -54,7 +54,6 @@ public class AdxConfig {
 
     HikariConfig hikariConfig = new HikariConfig();
     hikariConfig.setDataSource(dataSource);
-    hikariConfig.setMaximumPoolSize(1);
 
     return new HikariDataSource(hikariConfig);
   }
